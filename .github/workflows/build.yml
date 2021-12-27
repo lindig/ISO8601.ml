@@ -13,12 +13,10 @@ jobs:
         os:
           - macos-latest
           - ubuntu-latest
-          - windows-latest
+            # - windows-latest
         ocaml-compiler:
-          - 4.11.1
-        include:
-          - os: ubuntu-latest
-            ocaml-compiler: 4.03.0
+          - 4.11.2
+          - 4.07.0
     runs-on: ${{ matrix.os }}
     steps:
       - name: checkout
