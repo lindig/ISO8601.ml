@@ -1,6 +1,7 @@
 (library
  (public_name ISO8601)
  (libraries unix)
- (instrumentation (backend bisect_ppx)))
+ (instrumentation
+  (backend bisect_ppx)))
 
 (ocamllex ISO8601_lexer)

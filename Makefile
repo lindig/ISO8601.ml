@@ -12,4 +12,9 @@ test:
 clean:
 	@dune clean
 
-.PHONY: test build clean
+format:
+	dune build --auto-promote @fmt
+	opam lint
+	opam lint --normalise ISO8601.opam > tmp.opam && mv tmp.opam ISO8601.opam
+
+.PHONY: test build clean format

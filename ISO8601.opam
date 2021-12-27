@@ -1,17 +1,16 @@
 opam-version: "2.0"
-version: "0.2.6"
 name: "ISO8601"
-authors: [ "Julien Sagot" ]
+version: "0.2.6"
+synopsis: "ISO 8601 and RFC 3999 date parsing for OCaml"
 maintainer: ["c-cube" "ocaml-community"]
+authors: "Julien Sagot"
 homepage: "http://github.com/ocaml-community/ISO8601.ml/"
-dev-repo: "git+https://github.com/ocaml-community/ISO8601.ml.git"
 doc: "http://ocaml-community.github.io/ISO8601.ml/"
 bug-reports: "https://github.com/ocaml-community/ISO8601.ml/issues"
-synopsis: "ISO 8601 and RFC 3999 date parsing for OCaml"
 depends: [
   "dune" {>= "2.7"}
   "base-unix"
-  "ocaml" {>= "4.03.0" }
+  "ocaml" {>= "4.03.0"}
   "stdlib-shims" {with-test}
   "odoc" {with-doc}
   "ounit2" {with-test}
@@ -31,3 +30,4 @@ build: [
     "@doc" {with-doc}
   ]
 ]
+dev-repo: "git+https://github.com/ocaml-community/ISO8601.ml.git"
