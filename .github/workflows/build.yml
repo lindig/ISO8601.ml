@@ -4,8 +4,7 @@ on:
     branches:
       - master
   push:
-    branches:
-      - master
+
 jobs:
   build:
     strategy:
@@ -15,19 +14,19 @@ jobs:
           - macos-latest
           - ubuntu-latest
           - windows-latest
-        ocaml-version:
+        ocaml-compiler:
           - 4.11.1
         include:
           - os: ubuntu-latest
-            ocaml-version: 4.03.0
+            ocaml-compiler: 4.03.0
     runs-on: ${{ matrix.os }}
     steps:
       - name: checkout
         uses: actions/checkout@v2
       - name: setup-ocaml
-        uses: avsm/setup-ocaml@v1
+        uses: avsm/setup-ocaml@v2
         with:
-          ocaml-version: ${{ matrix.ocaml-version }}
+          ocaml-compiler: ${{ matrix.ocaml-compiler }}
       - name: setup
         run: |
           opam pin add . -y --no-action
